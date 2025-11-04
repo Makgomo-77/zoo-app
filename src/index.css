@@ -66,3 +66,81 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ---------------------------
+   🌿 Global Styles
+--------------------------- */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-green-50 text-gray-800 font-sans;
+}
+
+/* ---------------------------
+   🧭 Navbar Styling
+--------------------------- */
+nav a {
+  @apply transition-colors duration-200;
+}
+
+nav a:hover {
+  @apply text-yellow-300;
+}
+
+/* ---------------------------
+   🐾 Card Hover Animations
+--------------------------- */
+.card-hover {
+  @apply transform transition duration-300 ease-in-out hover:scale-105 hover:shadow-xl;
+}
+
+/* ---------------------------
+   ✨ Custom Animations
+--------------------------- */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.6s ease-in-out both;
+}
+
+/* ---------------------------
+   🌳 Page Section Styling
+--------------------------- */
+.section {
+  @apply py-10 px-6 sm:px-12;
+}
+
+.section-title {
+  @apply text-3xl font-bold text-green-800 mb-4;
+}
+
+/* ---------------------------
+   🗺️ Map Container Styling
+--------------------------- */
+.leaflet-container {
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* ---------------------------
+   🦓 Responsive Utilities
+--------------------------- */
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
