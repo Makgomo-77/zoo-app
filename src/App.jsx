@@ -11,7 +11,7 @@ export default function App() {
       <div className="min-h-screen bg-green-50">
         <Navbar />
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/home" element={<Home />} />
           <Route path="/animals" element={<Animals />} />
           <Route path="/places" element={<Places />} />
           <Route path="/map" element={<MapPage />} />
